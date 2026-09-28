@@ -48,20 +48,26 @@ pip install pandas numpy matplotlib seaborn plotly
 •Run all cells from top to bottom. The notebook reads the CSV by its file name, so do not rename it.
 
 What Was Done:
-Task 1, Import and setup. Loaded the CSV, checked data types, and converted posted_at from dd-mm-yyyy text to datetime.
+Task 1, 
+Import and setup. Loaded the CSV, checked data types, and converted posted_at from dd-mm-yyyy text to datetime.
 
-Task 2, Cleaning. Handled missing values, removed duplicates, standardised categories, fixed unrealistic values and extracted hashtag counts.
+Task 2,
+Cleaning. Handled missing values, removed duplicates, standardised categories, fixed unrealistic values and extracted hashtag counts.
 Details are in the table below.
 
-Task 3, Exploration. head, tail, info, describe, value counts, a correlation matrix and groupby summaries.
+Task 3, 
+Exploration. head, tail, info, describe, value counts, a correlation matrix and groupby summaries.
 
-Task 4, Wrangling. Merged a country-to-region lookup, and created engagement_score, log-transformed metrics and hashtag_count. Summaries by post
+Task 4, 
+Wrangling. Merged a country-to-region lookup, and created engagement_score, log-transformed metrics and hashtag_count. Summaries by post
 type, country and sentiment.
 
-Task 5, Statistics. Mean, median, mode, standard deviation, variance, percentiles, skewness and kurtosis for likes, comments, shares, watch time,
+Task 5, 
+Statistics. Mean, median, mode, standard deviation, variance, percentiles, skewness and kurtosis for likes, comments, shares, watch time,
 engagement rate and followers.
 
-Task 6, Visualisation. Six Matplotlib charts, six Seaborn charts and three interactive Plotly charts (15 in total).
+Task 6,
+Visualisation. Six Matplotlib charts, six Seaborn charts and three interactive Plotly charts (15 in total).
 
 Data Cleaning Summary:
 Issue found	Where	How it was handled:

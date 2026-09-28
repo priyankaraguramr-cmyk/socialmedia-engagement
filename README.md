@@ -48,6 +48,7 @@ pip install pandas numpy matplotlib seaborn plotly
 •Run all cells from top to bottom. The notebook reads the CSV by its file name, so do not rename it.
 
 What Was Done:
+
 Task 1:
 
 Import and setup. Loaded the CSV, checked data types, and converted posted_at from dd-mm-yyyy text to datetime.

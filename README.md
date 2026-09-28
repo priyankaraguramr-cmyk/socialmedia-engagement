@@ -29,40 +29,60 @@ percentage in a new column, engagement_rate_pct, and use that throughout.
 
 Tools Used:
 •Python 3, Pandas, NumPy for cleaning, wrangling and statistics
+
 •Matplotlib and Seaborn for static charts
+
 •Plotly for interactive charts
+
 •Google Colab / Jupyter Notebook for running everything
 
 How to Run:
 •Download the notebook and the CSV and keep them in the same folder.
+
 •Open the notebook in Jupyter or upload both files to Google Colab.
+
 •Install the libraries if needed:
+
 pip install pandas numpy matplotlib seaborn plotly
+
 •Run all cells from top to bottom. The notebook reads the CSV by its file name, so do not rename it.
 
 What Was Done:
 Task 1, Import and setup. Loaded the CSV, checked data types, and converted posted_at from dd-mm-yyyy text to datetime.
+
 Task 2, Cleaning. Handled missing values, removed duplicates, standardised categories, fixed unrealistic values and extracted hashtag counts.
 Details are in the table below.
+
 Task 3, Exploration. head, tail, info, describe, value counts, a correlation matrix and groupby summaries.
+
 Task 4, Wrangling. Merged a country-to-region lookup, and created engagement_score, log-transformed metrics and hashtag_count. Summaries by post
 type, country and sentiment.
+
 Task 5, Statistics. Mean, median, mode, standard deviation, variance, percentiles, skewness and kurtosis for likes, comments, shares, watch time,
 engagement rate and followers.
+
 Task 6, Visualisation. Six Matplotlib charts, six Seaborn charts and three interactive Plotly charts (15 in total).
 
 Data Cleaning Summary:
 Issue found	Where	How it was handled:
+
 Missing values (150 each)	age, gender, likes, comments, shares, sentiment	Median for age, mode for gender and sentiment, 0 for likes, comments and shares
+
 Repeated post_id (9 rows)	post_id	Kept the first occurrence of each id
+
 Rates above 100% (3 rows)	engagement_rate	Capped at 1 (100%)
+
 Extreme comment counts	comments	Capped at the 99.5th percentile
+
 Negative counts	likes, comments, shares	None found; check is in the code in case of other data
+
 Text categories	gender, post_type, device_type, sentiment	Already consistent; trimmed and title-cased for safety
 After cleaning the dataset has 4,991 rows.
 
+
 Key Findings:
 All engagement rates below are averages of engagement_rate_pct.
+
 Content performance
 
 •Post types are very close. Text (37.6%) and Video (37.6%) lead, followed by Image (37.3%). Reels are lowest at 36.0%.

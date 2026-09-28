@@ -1,46 +1,46 @@
 Social Media Engagement Analytics
 
-Python for Data Analysis | Module-End Assignment 5
+Python for Data Analysis | Module-End Assignment 5:
 
-Overview
+Overview:
 
 This project analyses engagement on 5,000 social media posts using Python. It covers the full workflow: loading and cleaning the raw data, 
 exploring it with Pandas, building a few new metrics, running descriptive statistics, and visualising the results with Matplotlib, Seaborn 
 and Plotly. The notebook ends with findings on content performance, user trends, behaviour and sentiment.
 
-Repository Contents
+Repository Contents:
 
-File	Description
+File	Description:
 social_media_engagement_analytics.ipynb	Main notebook with code, outputs, charts and explanations
 social_media_engagement_5000.csv	Dataset provided with the assignment
 README.docx	This file
 
-Dataset
+Dataset:
 
 The file has 5,000 rows and 19 columns, covering posts from January 2022 to December 2023.
 Group	Columns
 User	user_id, age, gender, country, follower_count, is_verified
 Post	post_id, post_type, post_category, hashtags, posted_at, device_type
 Engagement	likes, comments, shares, watch_time_sec, impression_count, engagement_rate
-Other	sentiment
 
+Other	sentiment:
 Note: engagement_rate in the source is a fraction (likes + comments + shares divided by impressions), not a percentage. I converted it to a
 percentage in a new column, engagement_rate_pct, and use that throughout.
 
-Tools Used
+Tools Used:
 •Python 3, Pandas, NumPy for cleaning, wrangling and statistics
 •Matplotlib and Seaborn for static charts
 •Plotly for interactive charts
 •Google Colab / Jupyter Notebook for running everything
 
-How to Run
+How to Run:
 •Download the notebook and the CSV and keep them in the same folder.
 •Open the notebook in Jupyter or upload both files to Google Colab.
 •Install the libraries if needed:
 pip install pandas numpy matplotlib seaborn plotly
 •Run all cells from top to bottom. The notebook reads the CSV by its file name, so do not rename it.
 
-What Was Done
+What Was Done:
 Task 1, Import and setup. Loaded the CSV, checked data types, and converted posted_at from dd-mm-yyyy text to datetime.
 Task 2, Cleaning. Handled missing values, removed duplicates, standardised categories, fixed unrealistic values and extracted hashtag counts.
 Details are in the table below.
@@ -51,8 +51,8 @@ Task 5, Statistics. Mean, median, mode, standard deviation, variance, percentile
 engagement rate and followers.
 Task 6, Visualisation. Six Matplotlib charts, six Seaborn charts and three interactive Plotly charts (15 in total).
 
-Data Cleaning Summary
-Issue found	Where	How it was handled
+Data Cleaning Summary:
+Issue found	Where	How it was handled:
 Missing values (150 each)	age, gender, likes, comments, shares, sentiment	Median for age, mode for gender and sentiment, 0 for likes, comments and shares
 Repeated post_id (9 rows)	post_id	Kept the first occurrence of each id
 Rates above 100% (3 rows)	engagement_rate	Capped at 1 (100%)
@@ -61,7 +61,7 @@ Negative counts	likes, comments, shares	None found; check is in the code in case
 Text categories	gender, post_type, device_type, sentiment	Already consistent; trimmed and title-cased for safety
 After cleaning the dataset has 4,991 rows.
 
-Key Findings
+Key Findings:
 All engagement rates below are averages of engagement_rate_pct.
 Content performance
 
@@ -79,7 +79,7 @@ User trends
 
 into more engagement per impression.
 
-Behavioural insights
+Behavioural insights:
 
 •The dataset only records the date, not the time of day, so best time of day cannot be answered directly. By weekday, Tuesday gets the most impressions 
 
